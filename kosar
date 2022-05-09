@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+<style>
+    html{
+        overflow: hidden;
+    }
+    .box{
+        top: 8%;
+        width: 98.95%;
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50);
+        background: #111111;
+        border-radius: 5px;
+
+    }
+    .box input[type = "email"], .box input[type = "password"], .box input[type = text]{  
+        border: 3px solid;
+        background: none;
+        margin: 9px auto;
+        border-color: #335830;
+        border-radius: 5px;
+        text-align: center;
+        padding: 11px 15px;
+        outline: none;
+        color: darkgray;
+        transition: 0.25s;
+
+    }
+    .box input[type = "email"]:focus , .box input[type = "password"]:focus , .box input[type = text]:focus{
+        width: 200px;
+        border-color: #317e4e;
+    }
+    .box input[type = "submit"]{
+        border: 2px solid;
+        background: none;
+        border-color: #335830;
+        border-radius: 5px;
+        color: gray;
+        padding: 7px 7px;
+        cursor: pointer;
+        transition: 0.25s;
+        outline: none
+    }
+    .box input[type = text]{
+        width: 200px;
+    }
+    .box input[type = email]{
+        width: 170px;
+    }
+    .box input[type = "submit"]:hover{
+        background: #317e4e;
+        border-color: #335830;
+    }
+    body{
+        background-color: white;
+    }
+    h1{
+        color: rgb(179, 177, 177);
+        font-family:sans-serif;
+        text-transform: uppercase;
+        
+        
+    }
+    nav{
+     height: 60px;
+     background: #2f2f30;
+     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+ }
+ .logo{
+     padding: 5px 0 0 80px;
+     width: 150px;
+     height: auto;
+ }
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    background: #2f2f30;
+    position: relative;
+    list-style: none;
+    display:inline-block;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+nav ul li a:hover{
+    background: #243342;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 60px;
+    display: none;    
+}
+
+nav ul li:hover > ul{
+    display: block;
+}
+
+nav ul ul li{
+width: 150px;
+float: none;
+display: list-item;
+position: relative;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;    
+}
+</style>
+
+
+</head>
+<body>
+<!--     
+    <div class="dropdwn"></div>
+    <nav>
+        <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> Tutorials <i class="fa-solid fa-caret-down"></i> </a>
+                <ul>
+                    <li> <a href="#"> Python </a> </li>
+                    <li> <a href="#"> Javascript </a> </li>
+                    <li> <a href="#"> jQuery </a> </li>
+                </ul>
+            </li>
+            <li> <a href="#"> Web Design <i class="fa-solid fa-caret-down"></i> </a>
+            <ul>
+                <li> <a href="#"> Front End </a> </li>
+                <li> <a href="#"> Back end </a> </li>
+                <li> <a href="#"> Others <i style="transform: rotate(-90deg);" class="fa-solid fa-caret-down"></i> </a> 
+                    <ul>
+                        <li> <a href="#"> Links </a> </li>
+                        <li> <a href="#"> Works </a> </li>
+                        <li> <a href="#"> Status </a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li> <a href="#"> Contact </a> </li>
+        <li> <a href="#"> Feedback </a> </li>
+    </ul>
+</nav>
+</div> -->
+    <form action="connect.php" method="post" class="box">
+        <h1>Kosár
+        </h1>
+        <input type="text" placeholder="Keresztnév" required name="knev">
+        <br>
+        <input type="text" placeholder="Vezetéknév" required name="vnev">
+        <br>
+        <input type="email" placeholder="Email" required name="email">
+        <br>
+        <input type="password" placeholder="Jelszó" required name="passw">
+        <br>
+        <input type="password" placeholder="Jelszó ismét" required name="passwi">
+        <br>
+        <input type="submit" value="belépés">
+    </form>
+</body>
+</html>
